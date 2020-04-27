@@ -69,9 +69,11 @@ Un fork du repo original . Puis, un Pull Request contenant **vos noms** et :
 Pour cet exercice nous avons commencé par lancer un bruteforce pur et dur sur le format du mot de passe (6char min et 3 chiffres). La durée annoncée est de plus d'un jour. Pendant que nous souhaitions capturer l'écran avant de passer à une attaque par dictionnaire l'attaque par bruteforce a réussie en 35secondes.
 
 Récupération du PMKID pour hashcat 
+
 ![](img/SWI_Labo05_Image01.png)
 
 Bruteforce réussi du mot de passe
+
 ![](img/SWI_Labo05_Image02.png)
 
 -	Envoyer le hash du commit et votre username GitHub et **les noms des participants** par email au professeur et à l'assistant
