@@ -76,6 +76,20 @@ Bruteforce réussi du mot de passe
 
 ![](img/SWI_Labo05_Image02.png)
 
+
+Si nous effectuons une attaque par dictionnaire en utilisant un fichier contenant les 1.8 Milliards de mots de passe les plus utilisés pour WPA avec les deux programmes nous avons des temps différents.
+
+Hashcat prends 1 seconde pour trouver le mot de passe mais une minute pour mettre le fichier en cache.
+
+![](img/SWI_Labo05_Image05.png)
+
+Notre programme commence le bruteforce directement mais il met 24 secondes pour trouver le mot de passe.
+
+![](img/SWI_Labo05_Image04.png)
+
+Si le mot de passe était en fin de liste, hashcat aurait sûrement pu gagner du temps grâce à l'utilisation de la carte graphique
+ainsi que la mise en cache.
+
 -	Envoyer le hash du commit et votre username GitHub et **les noms des participants** par email au professeur et à l'assistant
 
 

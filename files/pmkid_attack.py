@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# Author: Victor Truan, Jerome Bagnoud | SWI - Labo 05 - Exo 01
+# Author: Victor Truan, Jérôme Bagnoud | SWI - Labo 05 - Exo 01
 
 """
 Utilise le PMKID pour tenter de trouver la passphrase d'un wifi. Il faut pour cela un fichier contenant le premier handshake vulnérable à une attaque par PMKID.
@@ -43,7 +43,7 @@ for packet in wpa:
         DS = packet.FCfield.value
         toDS = bool(DS & 0x1)
         fromDS = bool(DS & 0x2)
-        #If is comes from the AP it should be the first message
+        #If it comes from the AP it should be the first message
         if(fromDS and not toDS):
             handshake1 = packet
     #When we got our handshake we need to find the ssid from the capture.
@@ -68,7 +68,6 @@ Clientmac   = a2b_hex(handshake1.addr1.replace(":" , ""))
 data        = bytes(A,"utf8") + APmac + Clientmac
 found = False
 fileName = arguments.w
-
 with open(fileName) as wordlist:
     for passPhrase in wordlist:
         passPhrase = str.encode(passPhrase.strip('\n'))
@@ -82,6 +81,7 @@ with open(fileName) as wordlist:
         if pmkid_to_test == pmkid :
             print("[+] Found passphrase: " + passPhrase.decode())
             found = True
+            exit(0)
     
     if not found:
         print("[-] Passphrase not found !")
